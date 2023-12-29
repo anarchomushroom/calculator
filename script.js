@@ -30,20 +30,6 @@ function operate(num1, num2, operator) {
     return operator(num1, num2);
 };
 
-function updateDisplay(value) {
-    const displayField = document.querySelector(".display");
-    
-    display = display + value;
-    displayField.textContent = display;
-};
-
 // =====================================
 // UI STUFF
 // =====================================
-const displayButton = document.querySelectorAll(".display-button");
-
-displayButton.forEach(button => {
-    button.addEventListener("click", () => {
-        updateDisplay(button.value);
-    });
-});
