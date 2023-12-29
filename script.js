@@ -4,9 +4,6 @@ let firstNumber;
 let operator;
 let secondNumber;
 
-// display variable
-let display = "";
-
 // FUNCTIONS
 // maths operator functions
 function add(num1, num2) {
