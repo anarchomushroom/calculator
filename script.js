@@ -1,6 +1,6 @@
 // VARIABLES
 let previousNumber;
-let currentOperator;
+let currentOperator = null;
 let currentNumber = "";
 
 const numberButtons = document.querySelectorAll("[data-number]");
@@ -52,7 +52,11 @@ function operate(num1, operator, num2) {
 };
 
 function setOperator(operator) {
-    if (currentOperator !== null) operate(previousNumber, currentNumber, currentOperator);
+    if (currentOperator !== null) {
+        evaluate();
+        currentOperator = operator;
+        return;
+    };
 
     previousNumber = currentNumber;
     currentOperator = operator;
@@ -70,7 +74,7 @@ function evaluate() {
     currentOperand.textContent = previousNumber;
     
     currentNumber = "";
-    currentOperator = "";
+    currentOperator = null;
 }
 
 // =======================================
